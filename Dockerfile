@@ -2,6 +2,7 @@ FROM node:16.3.0-alpine as build
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 COPY ui ./
+RUN ls -alh .
 RUN yarn install
 RUN yarn build
 
