@@ -41,7 +41,7 @@ function App() {
 
   let handleLookupMoonPhase = async (e) => {
     try {
-      let res = await fetch("http://localhost:8090/moon/phase", {
+      let res = await fetch("/api/moon/phase", {
         method: "GET"
       });
       let resJson = await res.json();
@@ -57,7 +57,7 @@ function App() {
   let handleLookupMoonRiseSet = async (lat, long) => {
     try {
       let res = await fetch(
-        "http://localhost:8090/moon/rise-set?lat=" + lat + "&long=" + long,
+        "/api/moon/rise-set?lat=" + lat + "&long=" + long,
         {
           method: "GET"
         }
@@ -76,7 +76,7 @@ function App() {
   let handleLookupSunRiseSet = async (lat, long) => {
     try {
       let res = await fetch(
-        "http://localhost:8090/sun/rise-set?lat=" + lat + "&long=" + long,
+        "/api/sun/rise-set?lat=" + lat + "&long=" + long,
         {
           method: "GET"
         }
