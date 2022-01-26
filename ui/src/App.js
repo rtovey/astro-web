@@ -120,6 +120,12 @@ function App() {
         <button type="submit">Lookup</button>
         <div className="message">{message ? <p>{message}</p> : null}</div>
 
+        <h1>Sun</h1>
+        <label>Rise time:</label>
+        <input type="text" value={sunRise} placeholder="" readOnly={true} />
+        <label>Set time:</label>
+        <input type="text" value={sunSet} placeholder="" readOnly={true} />
+
         <h1>Moon</h1>
         <label>Phase:</label>
         <input type="text" value={moonPhase} placeholder="" readOnly={true} />
@@ -127,12 +133,6 @@ function App() {
         <input type="text" value={moonRise} placeholder="" readOnly={true} />
         <label>Set time:</label>
         <input type="text" value={moonSet} placeholder="" readOnly={true} />
-
-        <h1>Sun</h1>
-        <label>Rise time:</label>
-        <input type="text" value={sunRise} placeholder="" readOnly={true} />
-        <label>Set time:</label>
-        <input type="text" value={sunSet} placeholder="" readOnly={true} />
       </form>
     </div>
   );
